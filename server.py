@@ -1,21 +1,16 @@
 import os
 import requests
 from fastmcp import FastMCP
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 mcp = FastMCP("atlassian")
 
-ATLASSIAN_URL = "https://deepthakkar.atlassian.net"
+ATLASSIAN_URL = os.environ.get("ATLASSIAN_URL", "https://deepthakkar.atlassian.net")
 JIRA_EMAIL = os.environ.get("JIRA_EMAIL", "deep.thakkar.eu@gmail.com")
 JIRA_API_TOKEN = os.environ.get("JIRA_API_TOKEN")
-
-if not JIRA_API_TOKEN:
-    try:
-        key_path = r"C:\Users\deept\AIProjects\Atlassian\JIRA_KEY.txt"
-        if os.path.exists(key_path):
-            with open(key_path, "r") as f:
-                JIRA_API_TOKEN = f.read().strip()
-    except Exception as e:
-        print(f"Failed to read JIRA_KEY.txt: {e}")
 
 def get_auth():
     if not JIRA_EMAIL or not JIRA_API_TOKEN:

@@ -30,15 +30,21 @@ This MCP server provides a set of highly useful tools that allow AI agents to ma
 
 ## 🔐 Setup & Authentication 🗝️
 
-To get this bad boy running, you need to provide your Jira credentials. The server looks for your credentials in two ways:
+To get this bad boy running, you need to provide your Jira credentials. The server loads your credentials directly from a `.env` file (which is safely ignored by Git! 🤫).
 
-1. **Environment Variables** 🌐 (Recommended for production):
-   - `JIRA_EMAIL` 📧: Your Atlassian account email.
-   - `JIRA_API_TOKEN` 🔑: Your Atlassian API Token.
+1. **Create a `.env` file** in the root of the project.
+2. **Add your credentials**:
+   ```env
+   JIRA_EMAIL=your.email@example.com
+   JIRA_API_TOKEN=your_atlassian_api_token
+   ATLASSIAN_URL=https://your-domain.atlassian.net
+   ```
 
-2. **Local Key File** 📁 (Great for local dev):
-   - Place a file named `JIRA_KEY.txt` in `C:\Users\deept\AIProjects\Atlassian\` containing your raw API token. 
-   - *(Note: This file is safely ignored by Git! 🤫)*
+### 🔑 How to get your Atlassian API Key:
+1. Go to your [Atlassian Account Security page](https://id.atlassian.com/manage-profile/security/api-tokens).
+2. Click **Create API token**.
+3. Give it a memorable label (e.g., "FastMCP Server").
+4. Copy the token and paste it into your `.env` file!
 
 ---
 
