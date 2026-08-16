@@ -63,6 +63,26 @@ python server.py
 
 ---
 
+## ⚙️ MCP Client Configuration 🔌
+
+To use this server with your favorite MCP client (like Claude Desktop, Cursor, or Antigravity), simply add it to your client's configuration file (e.g., `mcp_config.json` or `claude_desktop_config.json`):
+
+```json
+{
+  "mcpServers": {
+    "atlassian-mcp": {
+      "command": "python",
+      "args": [
+        "/absolute/path/to/atlassian-mcp/server.py"
+      ]
+    }
+  }
+}
+```
+*Note: Make sure to replace `/absolute/path/to/` with the actual path where you cloned this repository!* 🗺️
+
+---
+
 ## 🤝 Contributing & Updates
 
 Want to add more Jira magic? 🧙‍♂️ Feel free to fork, update `server.py`, and run the included `update_config.py` scripts to sync your fresh tools! 
