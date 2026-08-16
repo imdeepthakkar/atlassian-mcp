@@ -38,6 +38,7 @@ To get this bad boy running, you need to provide your Jira credentials. The serv
    JIRA_EMAIL=your.email@example.com
    JIRA_API_TOKEN=your_atlassian_api_token
    ATLASSIAN_URL=https://your-domain.atlassian.net
+   ATLASSIAN_READ_ONLY=false
    ```
 
 ### 🔑 How to get your Atlassian API Key:
