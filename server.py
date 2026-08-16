@@ -154,5 +154,27 @@ def get_confluence_page(page_id: str) -> str:
     response.raise_for_status()
     return response.text
 
+@mcp.tool()
+def create_confluence_page(space_key: str, title: str, content: str, parent_id: str = None) -> str:
+    """Create a new page in Confluence."""
+    assert_write_permitted()
+    url = f"{ATLASSIAN_URL}/wiki/rest/api/content"
+    payload = {
+        "type": "page",
+        "title": title,
+        "space": {"key": space_key},
+        "body": {
+            "storage": {
+                "value": content,
+                "representation": "storage"
+            }
+        }
+    }
+    if parent_id:
+        payload["ancestors"] = [{"id": parent_id}]
+    response = requests.post(url, auth=get_auth(), headers={"Accept": "application/json", "Content-Type": "application/json"}, json=payload, timeout=REQUEST_TIMEOUT)
+    response.raise_for_status()
+    return response.text
+
 if __name__ == "__main__":
     mcp.run(transport='stdio')

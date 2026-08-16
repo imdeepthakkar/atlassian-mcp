@@ -25,6 +25,7 @@ This MCP server provides a set of highly useful tools that allow AI agents to ma
 - **`get_confluence_spaces`** 🌌: Discover all the knowledge spaces available in your Confluence instance.
 - **`search_confluence`** 🕵️‍♂️: Use CQL (Confluence Query Language) to find documents, meeting notes, and specs.
 - **`get_confluence_page`** 📄: Pull the rich content (body storage) of any specific Confluence page by its ID!
+- **`create_confluence_page`** ✍️: Create brand new Confluence pages directly from your AI (supports parent pages)!
 
 ---
 
