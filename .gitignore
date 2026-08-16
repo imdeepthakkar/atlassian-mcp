@@ -1,0 +1,20 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Keys and Secrets
+JIRA_KEY.txt
+*.key
+*.pem
+secrets.json
+*_KEY.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
