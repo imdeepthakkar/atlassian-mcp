@@ -90,6 +90,3 @@ To use this server with your favorite MCP client (like Claude Desktop, Cursor, o
 Want to add more Jira magic? 🧙‍♂️ Feel free to fork, update `server.py`, and run the included `update_config.py` scripts to sync your fresh tools! 
 
 Happy building! 👷‍♀️🎉
-
-
-[![M8ven Score](https://m8ven.ai/badge/mcp/imdeepthakkar-atlassian-mcp-1uy2b6)](https://m8ven.ai/mcp/imdeepthakkar-atlassian-mcp-1uy2b6)
